@@ -1,0 +1,415 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --deeptextcolor: #495057;
+  --textcolor: #878a99;
+  --cyan: #299cdb;
+  --cyanbg: rgb(223, 240, 250);
+  --goodShadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.main-page {
+  background-color: #f3f3f9;
+  padding: 94px 12px 90px 12px;
+}
+.greetings div h4 {
+  color: var(--deeptextcolor);
+}
+.greetings div p {
+  font-size: 13px;
+}
+/*form position to adjust the icon*/
+
+.greeting-form form {
+  position: relative;
+  margin-right: 12px;
+}
+/*date calendar position*/
+.date-input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.hidden-date {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.hidden-date::-webkit-calendar-picker-indicator {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.text-input {
+  padding: 8px 28px 8px 14px;
+  border: none;
+  width: 100%;
+}
+.text-input:focus {
+  outline: none;
+}
+.text-input::placeholder {
+  color: var(--deeptextcolor);
+  font-size: 13px;
+}
+/*calendar button adjustments*/
+
+.calendarbtn {
+  all: unset;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  padding: 0 15px;
+  top: 50.5%;
+  transform: translateY(-50%);
+  background-color: #405189 !important;
+}
+.calendarbtn i {
+  color: white;
+  font-size: 14px;
+}
+/*Product button adjustments*/
+
+.greeting-form div:nth-child(2),
+.greeting-form div:nth-child(3) {
+  height: 40px;
+}
+.greeting-form div:nth-child(2) button,
+.greeting-form div:nth-child(3) button {
+  padding: 8px 14px;
+  gap: 10px;
+  border: none;
+  height: 100%;
+  transition: background-color 0.15s ease-in, color 0.15s ease-in;
+}
+.greeting-form div:nth-child(2) button i,
+.greeting-form div:nth-child(3) button i {
+  font-size: 14px;
+  transition: background-color 0.15s ease-in, color 0.15s ease-in;
+}
+.greeting-form div:nth-child(2) button,
+.greeting-form div:nth-child(2) button i {
+  color: #0ab39c;
+}
+.greeting-form div:nth-child(2) button {
+  background-color: rgb(218, 244, 240);
+}
+.greeting-form div:nth-child(2) button:hover {
+  background-color: #0ab39c;
+  color: white;
+}
+.greeting-form div:nth-child(2) button:hover i {
+  color: white;
+}
+/*specific the third button, i have added some adjustments along with it*/
+
+.greeting-form div:nth-child(3) button {
+  background-color: rgb(223, 240, 250);
+}
+.greeting-form div:nth-child(3) button i {
+  color: #299cdb;
+}
+.greeting-form div:nth-child(3) button:hover {
+  background-color: #299cdb;
+}
+.greeting-form div:nth-child(3) button:hover i {
+  color: white;
+}
+
+/*ORDER ROW*/
+.order-row h3 {
+  color: var(--deeptextcolor);
+}
+.order-row .col {
+  transition: transform 0.25s ease-in-out;
+}
+/*Column hover*/
+.order-row .col:hover {
+  box-shadow: rgba(0, 0, 0, 0.26) 0px 3px 8px;
+  transform: translateY(-3%);
+}
+.order-heading {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--textcolor);
+}
+.order-graph {
+  font-size: 14px;
+  font-weight: 500;
+  color: #0ab39c;
+}
+.order-link {
+  font-size: 13px;
+}
+/*Order column icon styling*/
+/*col 1*/
+.order-dollar {
+  all: unset;
+  background-color: rgb(218, 244, 240);
+  display: flex;
+  align-self: end;
+  align-items: center;
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+.order-dollar i {
+  color: #0ab39c;
+}
+/*col 2*/
+.order-cart {
+  all: unset;
+  background-color: #dff0fa;
+  display: flex;
+  align-self: end;
+  align-items: center;
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+.order-cart i {
+  color: #299ce1;
+}
+/*col 3*/
+.order-customer {
+  all: unset;
+  background-color: #fef4e4;
+  display: flex;
+  align-self: end;
+  align-items: center;
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+.order-customer i {
+  color: #f7b84b;
+}
+/*col 4*/
+.order-balance {
+  all: unset;
+  background-color: #e2e5ed;
+  display: flex;
+  align-self: end;
+  align-items: center;
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+.order-balance i {
+  color: #405189;
+}
+/*icon size increase*/
+.order-row i {
+  font-size: 18px;
+}
+
+/*Revenue and map Section*/
+/*Revenue header section*/
+.revenue-row {
+  padding: 0 12px;
+}
+.revenue-header p {
+  color: var(--deeptextcolor);
+  font-weight: 500;
+}
+.revenue-header button {
+  all: unset;
+  background-color: #dff0fa;
+  color: #3577f1;
+  padding: 4px 8px;
+  font-size: 11px;
+  border-radius: 4px;
+  transition: background-color 0.15s ease-in, color 0.15s ease-in;
+  text-transform: uppercase;
+}
+.revenue-header button:hover {
+  background-color: #3577f1;
+  color: white;
+}
+.revenue-header button:nth-child(4) {
+  background-color: #e2e5ed;
+  color: #405189;
+}
+.revenue-header button:nth-child(4):hover {
+  background-color: #405189;
+  color: white;
+}
+/*sales by location header*/
+
+.Salesbylocation-header button {
+  background-color: #eff2f7;
+}
+/*hover styling*/
+.Salesbylocation-header button:hover {
+  background-color: #405189;
+}
+
+/*revenue summary section*/
+.revenue-summary {
+  border-top: 1px dashed rgb(228, 228, 228);
+  border-bottom: 1px dashed rgb(228, 228, 228);
+  background-color: #f9fbfc;
+}
+.revenue-summary .col p {
+  color: var(--deeptextcolor);
+  font-size: 16.5px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.revenue-summary .col p span {
+  font-size: 13px;
+}
+.revenue-summary .col:first-child,
+.revenue-summary .col:nth-child(2),
+.revenue-summary .col:nth-child(3) {
+  border-right: 1px dashed rgb(228, 228, 228);
+}
+/*map chart responsiveness*/
+#regions_div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 300px;
+  height: 100%;
+  margin: 0 auto;
+}
+/*Best selling dropdown button */
+.dropdown-btns {
+  all: unset;
+  font-size: 14px;
+}
+.dropdown-toggle::after {
+  color: var(--textcolor);
+}
+
+/*dropdown menu position change*/
+.dropdownMenu {
+  position: absolute;
+  inset: auto auto 0px 0px;
+  margin: 0px;
+  transform: translate(-40px, 40px) !important;
+  border: none;
+  box-shadow: var(--goodShadow);
+}
+/*dropdown items*/
+.dropdownItems {
+  font-size: 13px !important;
+}
+.dropdown-btns span:nth-child(2) {
+  color: var(--textcolor);
+}
+
+/*Best product table*/
+.best-product-table p {
+  margin-bottom: 0 !important;
+  color: var(--deeptextcolor);
+  font-size: 14px;
+  font-weight: 500;
+}
+.best-product-table span {
+  color: var(--textcolor);
+  font-size: 12px;
+}
+.out-of-stock {
+  width: 100%;
+  font-size: 9px !important;
+  padding: 2px 5px !important;
+  all: unset;
+  text-align: center;
+  background-color: #fde8e4;
+  border-radius: 4px;
+  color: #f06561;
+  font-weight: 500;
+}
+/*nav buttons under table*/
+.footer-title p {
+  font-size: 14px;
+  color: var(--textcolor);
+}
+.nav-buttons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  all: unset;
+  border: 1px solid rgb(228, 228, 228);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 12px;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+/*hover style*/
+.nav-buttons button:hover {
+  background-color: #eff2f7;
+}
+/*active style*/
+.nav-buttons button:active {
+  background-color: #405189;
+  color: white;
+}
+.percentage::after {
+  content: "";
+}
+.percentage {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+}
+/*Donut chart*/
+
+.donutChart {
+  width: 100%;
+  height: 100%;
+}
+/*tables width adjustments*/
+
+.tabless {
+  overflow-x: auto;
+}
+
+/*Recent orders header and table*/
+/*header button adjustments*/
+.recent-orders-header button {
+  background-color: var(--cyanbg);
+  color: var(--cyan);
+  transition: background-color 0.15s ease-in, color 0.15s ease-in;
+}
+.recent-orders-header button:hover {
+  background-color: var(--cyan);
+  color: white;
+}
+/*table heading color change*/
+
+.recent-tableheading th,
+.recent-tableheading td {
+  background-color: #f3f6f9;
+  border-top: 1px solid rgb(228, 228, 228);
+  border-bottom: 1px solid rgb(228, 228, 228);
+}
+.recent-tableheading th p,
+.recent-tableheading td p {
+  color: var(--textcolor) !important;
+  font-weight: 600;
+}
+/*out of stock button in another table, reusing*/
+.out-of-stock-paid {
+  background-color: #daf4f0;
+  color: #0ab7b2;
+}
+.out-of-stock-pending {
+  background-color: #fef4e4;
+  color: #f7bc59;
+}
+.tabless tbody th,
+.tabless tbody td {
+  vertical-align: middle;
+}

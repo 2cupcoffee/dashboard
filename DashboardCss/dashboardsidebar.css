@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+:root {
+  --deeptextcolor: #495057;
+  --textcolor: #878a99;
+}
+body {
+  position: relative;
+}
+.offcanvas.offcanvas-start {
+  top: 0;
+  left: 0;
+  width: 250px !important;
+  background-color: #405189;
+}
+.sidebar-header {
+  height: 70px !important;
+}
+/*Dashboard dropdown adjustment*/
+.sidebar-body p {
+  font-size: 11px;
+  font-weight: 500;
+}
+/*dropdown bg color changes because it overlaps*/
+.dropdown-bg-color {
+  background-color: #405189 !important;
+}
+.sidebar-body span,
+.sidebar-body ul li a {
+  font-size: 14px;
+  color: white;
+  opacity: 50%;
+}
+/*line height changes*/
+.sidebar-body span,
+.sidebar-body ul li a {
+  line-height: 40px;
+}
+/*hover and active style*/
+
+.sidebar-body ul li a:hover {
+  color: white;
+  opacity: 1;
+}
+.sidebar-body span,
+.sidebar-body ul li a:active {
+  color: white;
+  opacity: 1;
+}
+
+/* sidebar default settings change*/
+.sidebarDashboard-dropdown {
+  all: unset;
+}
+/*toggle icon distance incrasing*/
+.sidebarDashboard-dropdown::after {
+  color: var(--textcolor);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+/*Pop up hot button*/
+.pop-hot-button {
+  all: unset;
+  padding: 2px 8px;
+  color: white;
+  background-color: #f06548;
+  font-size: 12px;
+  border-radius: 5px;
+}
+/*The footer data contains here*/
+#dashboard-footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 90;
+  height: 60px;
+  color: var(--textcolor);
+  font-weight: 400;
+  font-size: 14px;
+}
+#dashboard-footer p:nth-child(2) {
+  text-align: right;
+}
+
+/*Aside content goes here */
+#right-asidee {
+  position: absolute;
+  z-index: 80;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 280px;
+  background-color: #fff;
+  padding-top: 70px !important;
+}
+/*aside top title*/
+.aside-title {
+  font-size: 13px;
+  color: var(--textcolor);
+  font-weight: 600;
+}
+/*recent activity container adjustment and overflow*/
+.recent-activity {
+  height: 372px !important;
+  overflow-y: scroll;
+}
+.recent-activity::-webkit-scrollbar {
+  display: none; /*hides the scrollbar*/
+}
+
+/*the first row*/
+.recent-row .col-2 button {
+  all: unset;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+/*recent row button style*/
+.recent-row .col-2 button:nth-child(1) {
+  background-color: #daf4f0;
+}
+.recent-row .col-2 button:nth-child(1) i {
+  font-size: 12px;
+  color: #1eb59c;
+}
+/*the whole recent row p style*/
+.recent-row .col-10 p {
+  font-size: 13px;
+
+  line-height: 20px;
+  color: var(--deeptextcolor);
+}
+.recent-row .col-10 p:nth-child(2) span:nth-child(1) {
+  font-size: 13px;
+  color: var(--textcolor);
+}
+
+/*the description and time p*/
+.recentdesc {
+  font-size: 13px;
+  color: var(--textcolor);
+}
+.recenttime {
+  font-size: 11px;
+  color: var(--textcolor);
+}
+/*the second row & pictures styling*/
+.recentpic-row {
+  border: 1px solid rgb(236, 236, 236);
+  margin-left: 5px;
+  margin-right: 25px;
+}
+.recentpic-row div .col {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.recentpic-row .col img {
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: rgb(236, 236, 236);
+}
+/* row 2 button styling*/
+.recent-row-2 .col-2 button:nth-child(1) {
+  background-color: #fde8e4;
+}
+.recent-row-2 .col-2 button:nth-child(1) i {
+  font-size: 12px;
+  color: #f06548;
+}
+/*3rd row img*/
+.recent-row .col-2 img {
+  border-radius: 50%;
+}
+/*top10 category list styling*/
+.top10category ol li {
+  color: var(--textcolor);
+  font-size: 14px;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+}
+.top10category a {
+  color: var(--textcolor);
+  font-size: 14px;
+}
+/*product review section*/
+.review {
+  border: 1px solid rgb(236, 236, 236);
+  border-radius: 5px;
+}
+.review p {
+  font-size: 13px;
+  color: var(--textcolor);
+  padding-left: 10px;
+}
+.rating i {
+  font-size: 10px;
+  color: gold;
+}
+.productreview {
+  height: 247px !important;
+  overflow: auto;
+}
+.productreview::-webkit-scrollbar {
+  display: none;
+}
+.customer-review .bg-light p {
+  color: var(--deeptextcolor);
+}
+.customer-review p,
+.invite p {
+  font-size: 13px;
+  color: var(--textcolor);
+}
+
+.invite button {
+  all: unset;
+  background-color: #405189;
+  border-radius: 22px;
+  color: #fff;
+  transform: scale(0.8);
+}
+.invite button i {
+  color: #fff;
+  background-color: #5064a5;
+  padding: 10px 13.5px;
+  border-radius: 50%;
+}
+
+/*aside left*/
+#aside-left {
+  z-index: 125;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 70px;
+  background-color: #405189;
+}
+#aside-left i {
+  font-size: 20px;
+  color: white;
+}
+#aside-left i:nth-child(n + 4) {
+  opacity: 0.5;
+}
+#aside-left i:nth-child(n + 4):hover {
+  opacity: 1;
+}

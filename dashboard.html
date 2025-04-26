@@ -1,0 +1,2038 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Velzon - Admin & Dashboard Template</title>
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="dashboardImages/logo-sm.png" />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Fontawesome-->
+    <script
+      src="https://kit.fontawesome.com/54148970dd.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--bootstrap css-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <!--bootstrap js-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <!--Custom css-->
+    <link rel="stylesheet" href="DashboardCss/dashboardheader.css" />
+    <link rel="stylesheet" href="DashboardCss/dashboardsidebar.css" />
+    <link rel="stylesheet" href="DashboardCss/dashboardmedia.css" />
+    <link rel="stylesheet" href="DashboardCss/dashboardmainpage.css" />
+  </head>
+  <body>
+    <header
+    id="dashboard-header"
+    class="d-flex align-items-center justify-content-between"
+  >
+    <!--Left side of the header, containing the hamburger button and searchbox-->
+    <div class="left-side d-flex align-items-center">
+      <!--This button is for sidebar, offcanvas-->
+      <button
+        class="btn hamburger-icon"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasScrolling"
+        aria-controls="offcanvasScrolling"
+      >
+        <i class="fa-solid fa-bars hamburger-icon container-fluid"></i>
+      </button>
+       <!--search container-->
+       <div class="search-container d-none d-md-block">
+        <form>
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="search" placeholder="Search..." height="22" />
+        </form>
+      </div>
+      <div
+          class="offcanvas offcanvas-start"
+          data-bs-scroll="true"
+          data-bs-backdrop="false"
+          tabindex="-1"
+          id="offcanvasScrolling"
+          aria-labelledby="offcanvasScrollingLabel"
+        >
+          <div
+            class="offcanvas-header sidebar-header d-flex py-0 justify-content-center align-items-center"
+          >
+            <img
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+              src="dashboardImages/logo-light.png"
+              width="99"
+              height="17"
+            />
+          </div>
+          <!--Sidebar body-->
+          <div class="offcanvas-body sidebar-body overflow-auto">
+            <!--menu section-->
+            <!--dashboard dropdown-->
+            <p class="text-white-50 mb-0 pb-3 text-uppercase">Menu</p>
+            <div class="dropdown d-flex justify-content-between">
+              <button class="btn sidebarDashboard-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-gauge text-white bg-transparent me-1"></i>
+                <span>Dashboard</span>
+              </button>
+              <ul class="dropdown-menu w-100 dropdown-bg-color border-0 px-3 pb-3 ">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- Analytics</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- CRM</a>
+                </li>
+                <li><button class="nav-link" type="button"><a class="nav-link active" aria-current="page" href="dashboard.html">- E commerce</a></button></li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- Crypto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- NFT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- Job</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- Blog</a>
+                </li>
+              </ul>
+            </div>
+            <!--Apps dropdown-->
+            <div class="dropdown d-flex justify-content-between">
+              <button class="btn sidebarDashboard-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-brands fa-figma text-white bg-transparent me-1"></i>
+                <span>Apps</span>
+              </button>
+              <ul class="dropdown-menu w-100 dropdown-bg-color border-0 px-3 pb-3 ">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- Calendar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- Chat</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- Email</a>
+                </li>
+                <li><button class="nav-link" type="button"><a class="nav-link active" aria-current="page" href="dashboard.html">- E commerce</a></button></li> 
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- Tasks</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- CRM</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- Crypto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- Invoices</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- Support Tickets</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- NFT Marketplace</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- File Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- To Do</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- Jobs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- API Key</a>
+                </li>
+              </ul>
+            </div>
+            <!--Layout dropdown-->
+            <div class="dropdown d-flex justify-content-between">
+              <div class=" w-100 d-flex justify-content-between align-items-center">
+                <button class="btn sidebarDashboard-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-columns text-white me-1"></i>
+                  <span>Layout</span>
+                </button>
+                <button class="pop-hot-button" type="button" data-bs-toggle="dropdown" aria-expanded="false ">Hot</button>
+              
+              <ul class="dropdown-menu w-100 dropdown-bg-color border-0 px-3 pb-3 ">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- Horizontal</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- Detached</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">- Two Column</a>
+                </li>
+                <li><button class="nav-link" type="button"><a class="nav-link active" aria-current="page" href="#">- Hovered</a></button></li> 
+                
+              </ul>
+            </div>
+          </div>
+          <!--pages section-->
+          
+          <p class="text-white-50 mb-0 py-3 text-uppercase">pages</p>
+          <!--Authentication-->
+          <div class="dropdown d-flex justify-content-between">
+            <button class="btn sidebarDashboard-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person-circle text-white bg-transparent me-1"></i>
+              <span>Authentication</span>
+            </button>
+            <ul class="dropdown-menu w-100 dropdown-bg-color border-0 px-3 pb-3 ">
+              <li class="nav-item">
+                <a class="nav-link" href="#">- Sign in</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">- Sign Up</a>
+              </li>
+              <li><button class="nav-link" type="button"><a class="nav-link active" aria-current="page" href="#">- Password Reset</a></button></li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="#">- Password Create</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">- Lockscreen</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">- Success Message</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">- Two Step Verification</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">- Errors</a>
+              </li>
+            </ul>
+          </div>
+          <!--Apps dropdown-->
+          <div class="dropdown d-flex justify-content-between">
+            <button class="btn sidebarDashboard-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-card-text text-white bg-transparent me-1"></i>
+              <span>Pages</span>
+            </button>
+            <ul class="dropdown-menu w-100 dropdown-bg-color border-0 px-3 pb-3 ">
+              <li class="nav-item">
+                <a class="nav-link" href="#">- Starter</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">- Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">- Team</a>
+              </li>
+              <li><button class="nav-link" type="button"><a class="nav-link active" aria-current="page" href="#">- Timeline</a></button></li> 
+              <li class="nav-item">
+                <a class="nav-link" href="#">- FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">- Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">- Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">- Maintenance</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">- Coming Soon</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">- Sitemap</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">- Search Results</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">- Privacy Policy</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">- Term & Condition</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">- Blogs</a>
+              </li>
+              
+            </ul>
+          </div>
+          <!--Landing dropdown-->
+          <div class="dropdown d-flex justify-content-between">
+              <button class="btn sidebarDashboard-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-rocket text-white me-1"></i>
+                <span>Landing</span>
+              </button>
+            <ul class="dropdown-menu w-100 dropdown-bg-color border-0 px-3 pb-3 ">
+              <li class="nav-item">
+                <a class="nav-link" href="#">- One Page</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">- NFT Landing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">- Job</a>
+              </li>             
+            </ul>
+          </div>
+          </div>
+      </div>
+    </div>
+    <div class="right-side d-flex align-items-center me-4">
+      <ul class="nav justify-content-end">
+        <button>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <i class="fa-solid fa-magnifying-glass d-block d-md-none"></i>
+            </a>
+          </li>
+        </button>
+        <button>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <img
+                src="dashboardImages/us.svg"
+                height="20"
+                width="20"
+                style="margin-top: -4px; border-radius: 4px"
+              />
+            </a>
+          </li>
+        </button>
+        <button>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fa-solid fa-table-cells-large"></i>
+            </a>
+          </li>
+        </button>
+        <button>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><i class="fa-solid fa-bag-shopping"></i
+            ></a>
+          </li>
+        </button>
+        <button class="d-none d-sm-block">
+          <li class="nav-item">
+            <a class="nav-link d-flex justify-content-center" href="#"
+              ><i class="fa-solid fa-expand"></i
+            ></a>
+          </li>
+        </button>
+        <button class="d-none d-sm-block">
+          <li class="nav-item">
+            <a class="nav-link d-flex justify-content-center" href="#"
+              ><i class="fa-solid fa-moon"></i
+            ></a>
+          </li>
+        </button>
+        <button>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-solid fa-bell"></i></a>
+          </li>
+        </button>
+      </ul>
+      <div
+        class="avatarFounder d-flex justify-content-center align-items-center px-0 px-sm-3 ms-2"
+      >
+        <img
+          src="dashboardImages/avatar-1.jpg"
+          height="32"
+          width="32"
+          alt=""
+        />
+        <p class="mb-0 d-none d-xl-block">
+          Anna Adame <br />
+          <span>Founder</span>
+        </p>
+      </div>
+    </div>
+  </header>
+    <!--Main content-->
+    <main class="main-page">
+      <!--Greetings section-->
+      <section class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="row mb-3 pb-1">
+              <div class="col-12">
+                <div
+                  class="d-flex align-items-center flex-column flex-lg-row greetings container-fluid justify-content-between gap-4 gap-lg-0 text-center text-lg-start px-0"
+                >
+                  <div class="">
+                    <h4 class="fs-6 mb-1">Good Morning, Anna!</h4>
+                    <p class="text-muted mb-0">
+                      Here's what's happening with your store today.
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <div
+                      class="greeting-form d-flex row row-cols-sm-auto row-gap-3 me-1 justify-content-sm-start"
+                    >
+                      <form class="mx-2 p-0 shadow-sm col-12 col-sm-auto">
+                        
+                        <label class="date-input">
+                          <input type="date" 
+                          value="2025-01-01"
+                          min="2025-01-01"
+                          max="2025-12-31"
+                          class="hidden-date">
+                          <button class="calendarbtn">
+                            <i class="fa-solid fa-calendar"></i>
+                          </button>
+                          <input
+                          type="text"
+                          class="text-input"
+                          readonly
+                          placeholder="01 Jan, 2025 to 31 Jan, 2025"
+                        />
+                        </label>
+                      </form>
+                      <div class="col-auto px-2">
+                        <button class="d-flex align-items-center">
+                          <i class="fa-solid fa-circle-plus"></i>
+                          <p class="mb-0">Add Product</p>
+                        </button>
+                      </div>
+                      <div class="col-auto ps-2 pe-0">
+                        <button class="d-flex align-items-center">
+                          <i class="fa-solid fa-wave-square"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--My account section-->
+      <section class="container-fluid">
+        <div>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 order-row">
+            <!--first col-->
+            <div>
+              <div class="col p-3 bg-light shadow-sm mb-4">
+                <div class="d-flex justify-content-between mb-4">
+                  <div>
+                    <p class="text-uppercase order-heading mb-0">
+                      total earnings
+                    </p>
+                  </div>
+                  <div>
+                    <p class="order-graph mb-0">↗ +16.24 %</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex flex-column justify-content-between">
+                    <h3 class="fs-3 fw-bold mb-4">$559.25K</h3>
+                    <a href="" class="text-dark"
+                      ><p class="order-link mb-0">View net earnings</p></a
+                    >
+                  </div>
+                  <button class="order-dollar">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--second col-->
+            <div>
+              <div class="col p-3 bg-light shadow-sm mb-4">
+                <div class="d-flex justify-content-between mb-4">
+                  <div>
+                    <p class="text-uppercase order-heading mb-0">orders</p>
+                  </div>
+                  <div>
+                    <p class="order-graph mb-0 text-danger">↘ -3.57 %</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex flex-column justify-content-between">
+                    <h3 class="fs-3 fw-bold mb-4">36,894</h3>
+                    <a href="" class="text-dark"
+                      ><p class="order-link mb-0">View all orders</p></a
+                    >
+                  </div>
+                  <button class="order-cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--third col-->
+            <div>
+              <div class="col p-3 bg-light shadow-sm mb-4">
+                <div class="d-flex justify-content-between mb-4">
+                  <div>
+                    <p class="text-uppercase order-heading mb-0">customers</p>
+                  </div>
+                  <div>
+                    <p class="order-graph mb-0">↗ +29.08 %</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex flex-column justify-content-between">
+                    <h3 class="fs-3 fw-bold mb-4">183.35M</h3>
+                    <a href="" class="text-dark"
+                      ><p class="order-link mb-0">See details</p></a
+                    >
+                  </div>
+                  <button class="order-customer">
+                    <i class="fa-solid fa-circle-user"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--fourth col-->
+            <div>
+              <div class="col p-3 bg-light shadow-sm mb-4">
+                <div class="d-flex justify-content-between mb-4">
+                  <div>
+                    <p class="text-uppercase order-heading mb-0">my balance</p>
+                  </div>
+                  <div>
+                    <p class="order-graph mb-0">+0.00 %</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex flex-column justify-content-between">
+                    <h3 class="fs-3 fw-bold mb-4">$165.89K</h3>
+                    <a href="" class="text-dark"
+                      ><p class="order-link mb-0">Withdraw money</p></a
+                    >
+                  </div>
+                  <button class="order-balance">
+                    <i class="fa-solid fa-wallet"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Revenue and sales on map location-->
+      <section class="container-fluid px-0">
+        <div class="row g-0 revenue-row">
+          <!-- g-0 removes all gutters -->
+          <!-- Main Content Column -->
+          <div class="col-12 col-lg-8 pe-lg-3">
+            <div class="bg-white p-3 h-100 shadow-sm">
+              <!--revenue content -->
+              <div
+                class="d-flex justify-content-between align-items-center revenue-header mb-3"
+              >
+                <p class="fs-6 mb-0">Revenue</p>
+                <div>
+                  <button class="btn btn-sm btn-outline-secondary">All</button>
+                  <button class="btn btn-sm btn-outline-secondary">1M</button>
+                  <button class="btn btn-sm btn-outline-secondary">6M</button>
+                  <button class="btn btn-sm btn-outline-secondary">1Y</button>
+                </div>
+                
+              </div>
+              
+              <div class="row row-cols-2 row-cols-sm-4 revenue-summary">
+                <div class="col text-center py-3">
+                  <p>7,535<br /><span class="text-muted"> Orders </span></p>
+                </div>
+                <div class="col text-center py-3">
+                  <p>$22.89K<br /><span class="text-muted"> Earnings </span></p>
+                </div>
+                <div class="col text-center py-3">
+                  <p>367<br /><span class="text-muted"> Refunds </span></p>
+                </div>
+                <div class="col text-center py-3">
+                  <p class="text-success">
+                    18.92%<br /><span class="text-muted">
+                      Conversation Ratio
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="revenue-chart">
+                <div id="chart_div" style="width: 100%; height: 400px"></div>
+              </div>
+              </div>
+            </div>
+            <!-- Map Column - Now with proper mobile height -->
+          <div class="col-12 col-lg-4 ps-lg-3 mt-3 mt-lg-0">
+            <div class="bg-white p-3 h-100 d-flex flex-column shadow-sm">
+              <div
+                class="d-flex justify-content-between align-items-center Salesbylocation-header revenue-header mb-3"
+              >
+                <p class="mb-0">Sales Location</p>
+                <button class="btn btn-sm btn-outline-secondary">
+                  Export Report
+                </button>
+              </div>
+              <!-- Map container with minimum height -->
+              <div class="flex-grow-1" style="min-height: 300px">
+                <!-- Your map content goes here -->
+                <div
+                  class="h-100 w-100 bg-light d-flex align-items-center justify-content-center"
+                >
+                  <div id="regions_div" style="width: 100%; height: 100%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          </div>
+
+          
+      </section>
+      <!--Top selling-->
+      <!--Best selling products-->
+        <div class="py-4">
+          <div class="row g-lg-4 gy-4 ">
+            <div class="col-12 col-lg-6 px-4 px-lg-0 ps-lg-4 pe-lg-3 ">
+              <div>
+                <div class="bg-white p-3 shadow-sm">
+                  <div
+                    class="revenue-header d-flex justify-content-between"
+                    style="border-bottom: 1px solid rgb(228, 228, 228)"
+                  >
+                    <p class="fs-6">Best Selling Product</p>
+                    <div class="dropdown">
+                      <a
+                        class="btn dropdown-toggle dropdown-btns"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <span class="fw-bold">SORT BY:</span> <span>Today</span>
+                      </a>
+
+                      <ul class="dropdown-menu dropdownMenu">
+                        <li>
+                          <a class="dropdown-item dropdownItems" href="#"
+                            >Today</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item dropdownItems" href="#"
+                            >Yesterday</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item dropdownItems" href="#"
+                            >Last 7 Days</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item dropdownItems" href="#"
+                            >Last 30 Days</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item dropdownItems" href="#"
+                            >This Month</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item dropdownItems" href="#"
+                            >This Year</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="table-body tabless">
+                    <table class="table table-hover best-product-table">
+                      <!--Table body-->
+                      <tbody>
+                        <!--row1-->
+                        <tr>
+                          <th scope="row">
+                            <div class="d-flex align-items-center">
+                              <img
+                                src="bestAndTopProducts/tshirt.png"
+                                alt="Branded Tshirt"
+                                width="40px"
+                                height="40px"
+                              />
+                              <p class="mb-0 fw-normal ms-2">
+                                Branded T-shirts
+                                <br />
+                                <span>24 Apr 2025</span>
+                              </p>
+                            </div>
+                          </th>
+                          <td>
+                            <p>
+                              $29.00<br />
+                              <span>Price</span>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              62
+                              <br />
+                              <span>Orders</span>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              510
+                              <br />
+                              <span>Stock</span>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              $1798
+                              <br />
+                              <span>Amount</span>
+                            </p>
+                          </td>
+                        </tr>
+                        <!--row2-->
+                        <tr>
+                          <th scope="row">
+                            <div class="d-flex align-items-center">
+                              <img
+                                src="bestAndTopProducts/chair.png"
+                                alt="Bentwood Chair"
+                                width="40px"
+                                height="40px"
+                              />
+                              <p class="mb-0 fw-normal ms-2">
+                                Bentwood Chair
+                                <br />
+                                <span>19 Mar 2025</span>
+                              </p>
+                            </div>
+                          </th>
+                          <td>
+                            <p>
+                              $85.20<br />
+                              <span>Price</span>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              35
+                              <br />
+                              <span>Orders</span>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              <button class="out-of-stock">Out of stock</button>
+                              <br />
+                              <span>Stock</span>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              $2982
+                              <br />
+                              <span>Amount</span>
+                            </p>
+                          </td>
+                        </tr>
+                        <!--row3-->
+                        <tr>
+                          <th scope="row">
+                            <div class="d-flex align-items-center">
+                              <img
+                                src="bestAndTopProducts/cup.png"
+                                alt="Borosil Paper Cup"
+                                width="40px"
+                                height="40px"
+                              />
+                              <p class="mb-0 fw-normal ms-2">
+                                Borosil Paper Cup
+                                <br />
+                                <span>01 Mar 2025</span>
+                              </p>
+                            </div>
+                          </th>
+                          <td>
+                            <p>
+                              $14.00<br />
+                              <span>Price</span>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              80
+                              <br />
+                              <span>Orders</span>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              749
+                              <br />
+                              <span>Stock</span>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              $1120
+                              <br />
+                              <span>Amount</span>
+                            </p>
+                          </td>
+                        </tr>
+                        <!--row4-->
+                        <tr>
+                          <th scope="row">
+                            <div class="d-flex align-items-center">
+                              <img
+                                src="bestAndTopProducts/soda.png"
+                                alt="One Seater Sofa"
+                                width="40px"
+                                height="40px"
+                              />
+                              <p class="mb-0 fw-normal ms-2">
+                                One Seater Sofa
+                                <br />
+                                <span>11 Feb 2025</span>
+                              </p>
+                            </div>
+                          </th>
+                          <td>
+                            <p>
+                              $127.50<br />
+                              <span>Price</span>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              56
+                              <br />
+                              <span>Orders</span>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              <button class="out-of-stock">Out of stock</button>
+                              <br />
+                              <span>Stock</span>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              $7140
+                              <br />
+                              <span>Amount</span>
+                            </p>
+                          </td>
+                        </tr>
+                        <!--row5-->
+                        <tr>
+                          <th scope="row">
+                            <div class="d-flex align-items-center">
+                              <img
+                                src="bestAndTopProducts/helmet.png"
+                                alt="Stillbird Helmet"
+                                width="40px"
+                                height="40px"
+                              />
+                              <p class="mb-0 fw-normal ms-2">
+                                Stillbird Helmet
+                                <br />
+                                <span>17 Jan 2025</span>
+                              </p>
+                            </div>
+                          </th>
+                          <td>
+                            <p>
+                              $54.00<br />
+                              <span>Price</span>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              74
+                              <br />
+                              <span>Orders</span>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              805
+                              <br />
+                              <span>Stock</span>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              $3996
+                              <br />
+                              <span>Amount</span>
+                            </p>
+                          </td>
+                        </tr>
+                        <!--end of rows-->
+                      </tbody>
+                    </table>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center footer-title"
+                  >
+                    <p class="mb-0">
+                      Showing <span class="text-muted fw-bold">5</span> out of
+                      <span class="text-muted fw-bold">25 </span> Results
+                    </p>
+                    <div class="nav-buttons">
+                      <button>←</button>
+                      <button>1</button>
+                      <button>2</button>
+                      <button>3</button>
+                      <button>→</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 px-4 px-lg-0 pe-lg-4 ps-lg-3">
+              <div class="bg-white p-3 shadow-sm ">
+                <div
+                  class="revenue-header d-flex justify-content-between"
+                  style="border-bottom: 1px solid rgb(228, 228, 228)"
+                >
+                  <p class="fs-6">Top Sellers</p>
+                  <div class="dropdown">
+                    <a
+                      class="btn dropdown-toggle dropdown-btns"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span></span> <span>Report</span>
+                    </a>
+
+                    <ul class="dropdown-menu dropdownMenu">
+                      <li>
+                        <a class="dropdown-item dropdownItems" href="#"
+                          >Download Report</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item dropdownItems" href="#"
+                          >Export</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item dropdownItems" href="#"
+                          >Import</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="table-body tabless">
+                  <table class="table table-hover best-product-table">
+                    <!--Table body-->
+                    <tbody>
+                      <!--row1-->
+                      <tr class="">
+                        <th scope="row">
+                          <div class="d-flex align-items-center">
+                            <img
+                              src="bestAndTopProducts/itestfactory.png"
+                              alt="
+                              iTest Factory"
+                              width="40px"
+                              height="40px"
+                            />
+                            <p class="mb-0 fw-normal ms-2">
+                              iTest Factory
+                              <br />
+                              <span>Oliver Tyler</span>
+                            </p>
+                          </div>
+                        </th>
+                        <td>
+                          <p>
+                            <span>Bags and Wallets</span>
+                          </p>
+                        </td>
+                        <td>
+                          <p>
+                            8547
+                            <br />
+                            <span>Stock</span>
+                          </p>
+                        </td>
+                        <td>
+                          <p>
+                            <span>$541200</span>
+                          </p>
+                        </td>
+                        <td>
+                          <p class="percentage">
+                            32%
+                            <i
+                              class="fa-solid fa-chart-simple barchart"
+                              style="
+                                font-size: 14px;
+                                color: #09a792;
+                                margin-left: 5px;
+                              "
+                            ></i>
+                          </p>
+                        </td>
+                      </tr>
+                      <!--row2-->
+                      <tr class="">
+                        <th scope="row">
+                          <div class="d-flex align-items-center">
+                            <img
+                              src="bestAndTopProducts/digitech galaxy.png"
+                              alt="
+                              iTest Factory"
+                              width="40px"
+                              height="40px"
+                            />
+                            <p class="mb-0 fw-normal ms-2">
+                              Digitech Galaxy
+                              <br />
+                              <span>John Roberts</span>
+                            </p>
+                          </div>
+                        </th>
+                        <td>
+                          <p>
+                            <span> Watches</span>
+                          </p>
+                        </td>
+                        <td>
+                          <p>
+                            895
+                            <br />
+                            <span>Stock</span>
+                          </p>
+                        </td>
+                        <td>
+                          <p>
+                            <span>$75030</span>
+                          </p>
+                        </td>
+                        <td>
+                          <p class="percentage">
+                            79%
+                            <i
+                              class="fa-solid fa-chart-simple barchart"
+                              style="
+                                font-size: 14px;
+                                color: #09a792;
+                                margin-left: 5px;
+                              "
+                            ></i>
+                          </p>
+                        </td>
+                      </tr>
+                      <!--row3-->
+                      <tr class="">
+                        <th scope="row">
+                          <div class="d-flex align-items-center">
+                            <img
+                              src="bestAndTopProducts/nesta.png"
+                              alt="
+                              Nesta Technologies"
+                              width="40px"
+                              height="40px"
+                            />
+                            <p class="mb-0 fw-normal ms-2">
+                              Nesta Technologies
+                              <br />
+                              <span>Harley Fuller</span>
+                            </p>
+                          </div>
+                        </th>
+                        <td>
+                          <p>
+                            <span>Bike Accessories</span>
+                          </p>
+                        </td>
+                        <td>
+                          <p>
+                            3470
+                            <br />
+                            <span>Stock</span>
+                          </p>
+                        </td>
+                        <td>
+                          <p>
+                            <span>$45600 </span>
+                          </p>
+                        </td>
+                        <td>
+                          <p class="percentage">
+                            90%
+                            <i
+                              class="fa-solid fa-chart-simple barchart"
+                              style="
+                                font-size: 14px;
+                                color: #09a792;
+                                margin-left: 5px;
+                              "
+                            ></i>
+                          </p>
+                        </td>
+                      </tr>
+                      <!--row4-->
+                      <tr class="">
+                        <th scope="row">
+                          <div class="d-flex align-items-center">
+                            <img
+                              src="bestAndTopProducts/zoetic.png"
+                              alt="
+                              
+                              Zoetic Fashion"
+                              width="40px"
+                              height="40px"
+                            />
+                            <p class="mb-0 fw-normal ms-2">
+                              
+                              Zoetic Fashion
+                              <br />
+                              <span>James Bowen</span>
+                            </p>
+                          </div>
+                        </th>
+                        <td>
+                          <p>
+                            <span>	Clothes</span>
+                          </p>
+                        </td>
+                        <td>
+                          <p>
+                            5488
+                            <br />
+                            <span>Stock</span>
+                          </p>
+                        </td>
+                        <td>
+                          <p>
+                            <span>$29456</span>
+                          </p>
+                        </td>
+                        <td>
+                          <p class="percentage">
+                            40%
+                            <i
+                              class="fa-solid fa-chart-simple barchart"
+                              style="
+                                font-size: 14px;
+                                color: #09a792;
+                                margin-left: 5px;
+                              "
+                            ></i>
+                          </p>
+                        </td>
+                      </tr>
+                      <!--row5-->
+                      <tr class="">
+                        <th scope="row">
+                          <div class="d-flex align-items-center">
+                            <img
+                              src="bestAndTopProducts/meta.png"
+                              alt="
+                              
+                            Meta4Systems"
+                              width="40px"
+                              height="40px"
+                            />
+                            <p class="mb-0 fw-normal ms-2">
+                              
+                              Meta4Systems
+                              <br />
+                              <span>Zoe Dennis</span>
+                            </p>
+                          </div>
+                        </th>
+                        <td>
+                          <p>
+                            <span>	Furniture</span>
+                          </p>
+                        </td>
+                        <td>
+                          <p> 4100
+                            <br />
+                            <span>Stock</span>
+                          </p>
+                        </td>
+                        <td>
+                          <p>
+                            <span>	
+                              $11260</span>
+                          </p>
+                        </td>
+                        <td>
+                          <p class="percentage">
+                            57%
+                            <i
+                              class="fa-solid fa-chart-simple barchart"
+                              style="
+                                font-size: 14px;
+                                color: #09a792;
+                                margin-left: 5px;
+                              "
+                            ></i>
+                          </p>
+                        </td>
+                      </tr>
+                      <!--row ends here-->
+                    </tbody>
+                  </table>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center footer-title"
+                >
+                  <p class="mb-0">
+                    Showing <span class="text-muted fw-bold">5</span> out of
+                    <span class="text-muted fw-bold">25 </span> Results
+                  </p>
+                  <div class="nav-buttons">
+                    <button>←</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>→</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container-fluid ">
+        <div class="row g-0">
+          <div class="col-12 col-lg-4 pe-lg-3 mt-3 mt-lg-0">
+            <div class="bg-white p-3 h-100 shadow-sm">
+              <div class="">
+                <div
+                  class="revenue-header d-flex justify-content-between"
+                  
+                >
+                  <p class="fs-6">Top Sellers</p>
+                  <div class="dropdown">
+                    <a
+                      class="btn dropdown-toggle dropdown-btns"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span></span> <span>Report</span>
+                    </a>
+
+                    <ul class="dropdown-menu dropdownMenu">
+                      <li>
+                        <a class="dropdown-item dropdownItems" href="#"
+                          >Download Report</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item dropdownItems" href="#"
+                          >Export</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item dropdownItems" href="#"
+                          >Import</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                  <div id="chart-container" class="donut-chart-container">
+                    <div id="donutchart" class="donutChart" ></div>
+                </div>
+              </div>
+          </div>
+          </div>
+          <div class="col-12 col-lg-8 ps-lg-3 mt-3 mt-lg-0">
+            <div class="bg-white p-3 d-flex flex-column shadow-sm">
+              <!--header row-->
+              <div
+                class="d-flex justify-content-between align-items-center recent-orders-header revenue-header mb-3"
+              >
+                <p class="mb-0">Recent Orders</p>
+                
+                <button class="btn btn-sm btn-outline-secondary">
+                  <i class="fa-solid fa-file-import me-1" style="width: 100% height
+                100%;"></i>
+                  Generate Report
+                </button>
+              </div>
+              <!--main table-->
+              <div class="table-body tabless">
+                <table class="table table-borderless best-product-table">
+                  <!--Table body-->
+                  <tbody>
+                    <!--row1-->
+                    <tr class="recent-tableheading">
+                      <th scope="row">
+                          <p class="mb-0 fw-normal fw-bold">
+                            Order ID
+                           </p>
+                        </div>
+                      </th>
+                      <td>
+                        <p>
+                          Customer
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          Product
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          Amount
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          Vendor
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          Status
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          Rating
+                        </p>
+                      </td>
+                    </tr>
+                    <!--row2-->
+                    <tr>
+                      <td>
+                        <p>
+                          #VZ2112
+                        </p>
+                      </td>
+                      <th>
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="orders/avatar-1.jpg"
+                            alt="
+                            Alex Smith"
+                            width="40px"
+                            height="40px"
+                            style="border-radius: 50%;"
+                          />
+                          <p class="mb-0 fw-normal ms-2">
+                            Alex Smith  
+                          </p>
+                        </div>
+                      </th>
+                      <td>
+                        <p>
+                          Clothes
+                        </p>
+                      </td>
+                      <td>
+                        <p class="text-success">
+                        	$109.00
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          Zoetic Fashion
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          <!--Paid button, green-->
+                          <button class="out-of-stock out-of-stock-paid">Paid</button>
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          5.0<span>(61 votes)</span>
+                        </p>
+                      </td>
+                    </tr>
+                    <!--row3-->
+                    <tr>
+                      <td>
+                        <p>
+                          #VZ2111
+                        </p>
+                      </td>
+                      <th>
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="orders/avatar-2.jpg"
+                            alt="
+                            Jansh Brown"
+                            width="40px"
+                            height="40px"
+                            style="border-radius: 50%"
+                          />
+                          <p class="mb-0 fw-normal ms-2">
+                            Jansh Brown  
+                          </p>
+                        </div>
+                      </th>
+                      <td>
+                        <p>
+                          Kitchen Storage
+                        </p>
+                      </td>
+                      <td>
+                        <p class="text-success">
+                          $149.00
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          Micro Design
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          <!--Pending button, yellow-->
+                          <button class="out-of-stock out-of-stock-pending">Pending</button>
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          4.5<span>(61 votes)</span>
+                        </p>
+                      </td>
+                    </tr>
+                    <!--row4-->
+                    <tr>
+                      <td>
+                        <p>
+                          #VZ2109
+                        </p>
+                      </td>
+                      <th>
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="orders/avatar-3.jpg"
+                            alt="
+                            Ayaan Bowen"
+                            width="40px"
+                            height="40px"
+                            style="border-radius: 50%;"
+                          />
+                          <p class="mb-0 fw-normal ms-2">
+                            Ayaan Bowen  
+                          </p>
+                        </div>
+                      </th>
+                      <td>
+                        <p>
+                          Ayaan Bowen
+                        </p>
+                      </td>
+                      <td>
+                        <p class="text-success">
+                        	$215.00	
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          Nesta Technologies
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          <!--Paid button, green-->
+                          <button class="out-of-stock out-of-stock-paid">Paid</button>
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          4.9<span>(89 votes)</span>
+                        </p>
+                      </td>
+                    </tr>
+                    <!--row5-->
+                    <tr>
+                      <td>
+                        <p>
+                          #VZ2108
+                        </p>
+                      </td>
+                      <th>
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="orders/avatar-4.jpg"
+                            alt="
+                            Prezy Mark"
+                            width="40px"
+                            height="40px" style="border-radius: 50%;"
+                            
+                          />
+                          <p class="mb-0 fw-normal ms-2">
+                            Prezy Mark  
+                          </p>
+                        </div>
+                      </th>
+                      <td>
+                        <p>
+                          Furniture
+                        </p>
+                      </td>
+                      <td>
+                        <p class="text-success">
+                          $199.00
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          Syntyce Solutions
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          <!--unpaid button, gotta be red-->
+                          <button class="out-of-stock">Unpaid</button>
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          4.3<span>(47 votes)</span>
+                        </p>
+                      </td>
+                    </tr>
+                    <!--row6-->
+                    <tr>
+                      <td>
+                        <p>
+                          #VZ2107
+                        </p>
+                      </td>
+                      <th>
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="orders/avatar-6.jpg"
+                            alt="
+                            Vihan Hudda
+"
+                            width="40px"
+                            height="40px"
+                            style="border-radius: 50%;"
+                          />
+                          <p class="mb-0 fw-normal ms-2">
+                            Vihan Hudda
+  
+                          </p>
+                        </div>
+                      </th>
+                      <td>
+                        <p>
+                          Bags and Wallets
+                        </p>
+                      </td>
+                      <td>
+                        <p class="text-success">
+                        	$330.00
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          iTest Factory
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          <!--Paid button, green-->
+                          <button class="out-of-stock out-of-stock-paid">Paid</button>
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          4.7<span>(161 votes)</span>
+                        </p>
+                      </td>
+                    </tr>
+                    <!--end of rows-->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+      </section>
+    </main>
+    <!--main content ends here-->
+    <!--Aside content starts from here-->
+    <aside id="right-asidee" class="px-3 pb-3">
+      <p class="mb-0 py-3 aside-title text-uppercase">recent activity</p>
+      <!--recent activity section-->
+      <section class="container-fluid p-0 recent-activity">
+        <!--row 1-->
+        <div class="d-flex flex-column mb-3">
+          <div class="row recent-row">
+            <div class="col-2">
+              <button class="d-flex justify-content-center align-items-center">
+                <i class="bi bi-cart"></i>
+              </button>
+            </div>
+            <div class="col-10">
+              <div>
+                <p class="mb-0">Purchase by James Price</p>
+                <p><span class="mb-0 recentdesc">Product noise evolve smartwatch<br>
+                <span class="recenttime">02:14 PM Today</span></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--row 2-->
+        <div class="d-flex flex-column">
+          <div class="row recent-row recent-row-2">
+            <div class="col-2">
+              <button class="d-flex justify-content-center align-items-center">
+                <i class="bi bi-stack"></i>
+              </button>
+            </div>
+            <div class="col-10">
+              <div>
+                <p class="mb-0">Added new style collection</p>
+                <span class="mb-0 recentdesc">By Nesta Technologies</span>
+                <div class="row row-cols-3 recentpic-row">
+                  <div class="col p-1 img-fluid"> <img src="bestAndTopProducts/tshirt.png" alt="" height="50px" width="zpx"></div>
+                  <div class="col p-1"> <img src="bestAndTopProducts/chair.png" alt="" height="50px" width="50px"></div>
+                  <div class="col p-1"> <img src="bestAndTopProducts/helmet.png" alt="" height="50px" width="50px"></div>
+                </div>
+                <span class="recenttime">9:47 PM yesterday</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--row3-->
+        <div class="d-flex flex-column mt-3">
+          <div class="row recent-row">
+            <div class="col-2">
+              <img src="orders/avatar-2.jpg" alt="" width="25px">
+            </div>
+            <div class="col-10">
+              <div>
+                <p class="mb-0">Natasha Carey have liked the products</p>
+                <p><span class="mb-0 recentdesc">Allow users to like products in your WooCommerce store.<br>
+                <span class="recenttime">25 Dec, 2025
+                </span></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--row4-->
+        <div class="d-flex flex-column mt-3">
+          <div class="row recent-row">
+            <div class="col-2">
+              <button class="d-flex justify-content-center align-items-center" style="background-color: #3577F1;">
+                <i class="bi bi-percent" style="color: white;"></i>
+              </button>
+            </div>
+            <div class="col-10">
+              <div>
+                <p class="mb-0">Today offers by <span style="color: #3577F1;">Digitech Galaxy</span></p>
+                <p><span class="mb-0 recentdesc">Offer is valid on orders of Rs.500 Or above for selected products only.<br>
+                <span class="recenttime">12 Dec, 2025
+                </span></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--row5-->
+        <div class="d-flex flex-column">
+          <div class="row recent-row recent-row-2">
+            <div class="col-2">
+              <button class="d-flex justify-content-center align-items-center">
+                <i class="bi bi-book"></i>
+              </button>
+            </div>
+            <div class="col-10">
+              <div class="col-10">
+                <div>
+                  <p class="mb-0">Favorite Product</p>
+                  <p><span class="mb-0 recentdesc">Esther James have Favorite product.<br>
+                  <span class="recenttime">25 Nov, 2025
+                  </span></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Top 10 category section-->
+      <section class="container-fluid p-0 top10category">
+        <p class="mb-0 py-3 aside-title text-uppercase">top 10 categories</p>
+        <div>
+          <ol class="p-0">
+            <li><p class="mb-1">1. Mobile & Accessories</p>
+            <p class="mb-1">(10,294)</p></li>
+            <li><p class="mb-1">2. Desktop</p>
+            <p class="mb-1">(6,256)</p></li>
+            <li><p class="mb-1">3. Electronics</p>
+            <p class="mb-1">(3,479)</p></li>
+            <li><p class="mb-1">4. Home & Furniture</p>
+            <p class="mb-1">(2,275)</p></li>
+            <li><p class="mb-1">5. Grocery</p>
+            <p class="mb-1">(1,950)</p></li>
+            <li><p class="mb-1">6. Fashion</p>
+            <p class="mb-1">(1,582)</p></li>
+            <li><p class="mb-1">7. Appliances</p>
+            <p class="mb-1">(1,037)</p></li>
+            <li><p class="mb-1">8. Beauty, Toys & More</p>
+            <p class="mb-1">(924)</p></li>
+            <li><p class="mb-1">9. Food & Drinks</p>
+            <p class="mb-1">(701)</p></li>
+            <li><p class="mb-1">10. Toys & Games</p>
+            <p class="mb-1">(239)</p></li>
+          </ol>
+          <a href="#" class="text-center"><p>View all categories</p></a>
+        </div>
+      </section>
+      <!--product review category-->
+      <section class="container-fluid p-0 ">
+        <p class="mb-0 py-3 aside-title text-uppercase">product reviews</p>
+        
+        <div class="d-flex flex-column row-gap-3 productreview">
+          <!--row1-->
+          <div class="d-flex p-3 review">
+            <img src="bestAndTopProducts/zoetic.png" alt="" height="45px" class="bg-primary-subtle rounded p-1">
+            <div>
+              <p class="mb-1 fst-italic">"Very beautiful product and very helpful...</p>
+              <div class="d-flex rating ps-2 gap-1">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <p class="mb-0 mt-1 text-end">
+                - by <span class="fst-italic">Zoetic Fashion</span>
+              </p>
+            </div> 
+          </div>
+          <!--row2-->
+          <div class="d-flex p-3 review">
+            <img src="orders/avatar-2.jpg" alt="" height="45px" class="bg-primary-subtle rounded ">
+            <div>
+              <p class="mb-1 fst-italic">"The product is very beautiful I like it."</p>
+              <div class="d-flex rating ps-2 gap-1">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <p class="mb-0 mt-1 text-end">
+                - by <span class="fst-italic">Nancy Martino</span>
+              </p>
+            </div> 
+          </div>
+          <!--row3-->
+          <div class="d-flex p-3 review">
+            <img src="bestAndTopProducts/itestfactory.png" alt="" height="45px" class="bg-primary-subtle rounded p-1">
+            <div>
+              <p class="mb-1 fst-italic">"Great product and looks great, lots of...</p>
+              <div class="d-flex rating ps-2 gap-1">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="mb-0 mt-1 text-end">
+                - by <span class="fst-italic">Force medicine</span>
+              </p>
+            </div> 
+          </div>
+        </div>
+      </section>
+      <!--Customer review section-->
+      <section class="container-fluid p-0 customer-review">
+        <p class="mb-0 py-3 aside-title text-uppercase">customer reviews</p>
+        <div class="d-flex justify-content-between p-3 bg-light rounded align-items-center">
+          <div class="gap-1 fs-6" style="color: gold;">
+            <i class="bi bi-star-fill"></i>
+           <i class="bi bi-star-fill"></i>
+           <i class="bi bi-star-fill"></i>
+           <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+          </div>
+          <p class="mb-0">4.5 out of 5</p>
+        </div>
+        <p class="mt-2 text-center">Total 5.50k reviews</p>
+        <div class="">
+          <img src="dashboardImages/cusomterreviews.png" alt="" class="img-fluid">
+        </div>
+      </section>
+      <section class="container-fluid p-2 mt-5 ">
+        <div class="d-flex flex-column align-items-center bg-secondary-subtle rounded p-3 invite">
+          <img src="dashboardImages/giftbox.png" alt="" height="60px">
+          <p class="mt-3 fs-6 text-muted">Invite New Seller</p>
+          <p class="mb-0 text-center">Refer a new seller to us and earn $100 per refer</p>
+          <button class="mt-4 d-flex align-items-center justify-content-between">
+            <i class="bi bi-envelope-fill"></i><span class="ps-2 pe-3">Invite now</span>
+          </button>
+        </div>
+      </section>
+    </aside>
+    <!--left sidebar-->
+    <aside id="aside-left">
+      <nav class="container-fluid p-2">
+        <div class="p-3">
+          <div class="d-flex flex-column row-gap-4 align-items-center">
+            <img class="img-fluid mb-2" src="dashboardImages/logo-sm.png" alt="">
+          <i class="fa-solid fa-gauge"></i>
+          <i class="fa-brands fa-figma"></i>
+          <i class="bi bi-columns"></i>
+          <i class="bi bi-three-dots"></i>
+          <i class="bi bi-person-circle"></i>
+          <i class="bi bi-card-text"></i>
+          <i class="bi bi-rocket"></i>
+          </div>
+        </div>
+      </nav>
+    </aside>
+
+    <footer id="dashboard-footer" class="bg-white p-3 d-flex align-items-center ">
+      <div class="container-fluid d-flex justify-content-between ">
+        <p class="mb-0 ">2025 © Velzon.</p>
+        <p class="mb-0">Design & Develop by Themesbrand
+        </p>
+      </div>
+    </footer>
+
+
+    <!--Charts js-->
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      var chart, chartData, chartOptions;
+
+      function drawVisualization() {
+        chartData = google.visualization.arrayToDataTable([
+          ["Month", "Orders", "Earnings", "Refunds", "Average"],
+          ["Jan", 85, 45, 12, 47.3],
+          ["Feb", 72, 68, 8, 49.3],
+          ["Mar", 93, 52, 15, 53.3],
+          ["Apr", 64, 78, 6, 49.3],
+          ["May", 108, 42, 20, 56.7],
+          ["Jun", 77, 85, 9, 57.0],
+          ["Jul", 95, 38, 18, 50.3],
+          ["Aug", 82, 92, 5, 59.7],
+          ["Sep", 115, 58, 22, 65.0],
+          ["Oct", 68, 105, 4, 59.0],
+          ["Nov", 97, 62, 16, 58.3],
+          ["Dec", 120, 48, 25, 64.3],
+        ]);
+
+        chartOptions = {
+          chartArea: {
+            left: "10%", // More space for y-axis labels
+            top: "5%",
+            width: "85%",
+            height: "75%",
+          },
+          colors: ["#22BAA6", "#EF6548", "#405189"], // Order, Earnings, Refund colors
+          seriesType: "bars",
+          series: { 3: { type: "line", color: "#888" } }, // Average line
+          legend: {
+            position: "bottom",
+            textStyle: { fontSize: 12 },
+          },
+          hAxis: {
+            textStyle: { color: "#666" },
+            showTextEvery: 1,
+          },
+          vAxis: {
+            minValue: 0, // Force start at 0
+            maxValue: 120, // Force max at 120
+            gridlines: { color: "#f5f5f5" }, // Light gridlines
+            baselineColor: "#ddd",
+            textStyle: { color: "#666" }, // Visible axis labels
+            textPosition: "out", // Show labels normally
+          },
+          width: "100%",
+          height: "100%",
+          backgroundColor: "transparent",
+        };
+
+        var container = document.getElementById("chart_div");
+        chart = new google.visualization.ComboChart(container);
+        chart.draw(chartData, chartOptions);
+
+        // Responsive handling
+        window.addEventListener("resize", function () {
+          if (chart) chart.draw(chartData, chartOptions);
+        });
+      }
+    </script>
+    <!--map chart-->
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", {
+        packages: ["geochart"],
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      // Store chart and data globally
+      var geoChart, geoChartData, geoChartOptions;
+
+      function drawRegionsMap() {
+        geoChartData = google.visualization.arrayToDataTable([
+          ["Country", "Popularity"],
+          ["India", 500],
+          ["United States", 300],
+          ["Brazil", 400],
+          ["Canada", 500],
+          ["France", 600],
+          ["RU", 700],
+        ]);
+
+        geoChartOptions = {
+          // Responsive settings
+          width: "100%",
+          height: "100%",
+          // Optional: Better mobile display
+          region: "world",
+          displayMode: "auto",
+          colorAxis: { colors: ["#e6f2ff", "#003366"] },
+          backgroundColor: "transparent",
+          datalessRegionColor: "#f5f5f5",
+          defaultColor: "#f5f5f5",
+        };
+
+        var container = document.getElementById("regions_div");
+        geoChart = new google.visualization.GeoChart(container);
+
+        // Initial draw
+        drawGeoChart();
+
+        // Set up responsive behavior
+        setupResponsiveGeoChart();
+      }
+
+      function drawGeoChart() {
+        // Get current container dimensions
+        var width = document.getElementById("regions_div").offsetWidth;
+        var height = Math.min(width * 0.6, 600); // 60% aspect ratio, max 600px
+
+        // Apply dimensions
+        geoChartOptions.width = width;
+        geoChartOptions.height = height;
+
+        geoChart.draw(geoChartData, geoChartOptions);
+      }
+
+      function setupResponsiveGeoChart() {
+        // Redraw chart on window resize with debounce
+        var resizeTimer;
+        window.addEventListener("resize", function () {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(function () {
+            if (geoChart) {
+              drawGeoChart();
+            }
+          }, 100); // 100ms delay
+        });
+      }
+    </script>
+  <!--Donut chart-->
+
+  <script type="text/javascript">
+    google.charts.load('current', {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Source', 'Percentage'],
+        ['Direct', 35],
+        ['Social', 25],
+        ['Email', 20],
+        ['Other', 10],
+        ['Referrals', 10]
+      ]);
+
+      var options = {
+        pieHole: 0.5,
+        colors: ['#405189', '#008271', '#F7B84B', '#F06548', '#299CDB'],
+        chartArea: {
+          left: 0,
+          top: 0,
+          width: '100%',
+          height: '80%'
+        },
+        legend: {
+          position: 'bottom',
+          alignment: 'center',
+          textStyle: {
+            fontSize: 12
+          }
+        },
+        pieSliceText: 'percentage',
+        tooltip: {
+          text: 'percentage'
+        },
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'transparent'
+      };
+
+      function resizeChart() {
+        var container = document.getElementById('chart-container');
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        
+        // Adjust height based on container width for better aspect ratio
+        var containerWidth = container.clientWidth;
+        var chartHeight = Math.min(containerWidth * 0.8, 500);
+        container.style.height = chartHeight + 'px';
+        
+        chart.draw(data, options);
+      }
+
+      // Initial draw
+      resizeChart();
+      
+      // Redraw on window resize
+      window.addEventListener('resize', resizeChart);
+    }
+  </script>
+    <!--Custom js-->
+    <script src="dashboard.js"></script>
+  </body>
+</html>
